@@ -11,7 +11,7 @@ class NewTaskContainer extends Component {
         super(props);
         this.state = {
           title: "", 
-          timeslot: "",
+          priority: "",
           location: "", 
           employeeId: null, 
           redirect: false, 
@@ -35,7 +35,7 @@ class NewTaskContainer extends Component {
         }
         let task = {
             title: this.state.title,
-            timeslot: this.state.timeslot,
+            priority: this.state.priority,
             location: this.state.location,
             employeeId: this.state.employeeId
         };
