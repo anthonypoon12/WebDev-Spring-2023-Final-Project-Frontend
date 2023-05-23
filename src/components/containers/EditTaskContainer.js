@@ -43,7 +43,7 @@ class EditTaskContainer extends Component {
         super(props);
         this.state = {
           title: "", 
-          timeslot: "",
+          priority: "",
           employeeId: null, 
           redirect: false, 
           redirectId: null,
@@ -57,7 +57,7 @@ class EditTaskContainer extends Component {
         this.props.fetchEmployees();
         this.setState({
             title: this.props.task.title, 
-            timeslot: this.props.task.timeslot,
+            priority: this.props.task.priority,
             employeeId: this.props.task.employeeId, 
         });
       }
@@ -93,7 +93,7 @@ class EditTaskContainer extends Component {
         let task = {
             id: this.props.task.id,
             title: this.state.title,
-            timeslot: this.state.timeslot,
+            priority: this.state.priority,
             employeeId: this.state.employeeId
         };
         
@@ -129,8 +129,8 @@ class EditTaskContainer extends Component {
             <input type="text" name="title" value={this.state.title || ''} placeholder={task.title} onChange ={(e) => this.handleChange(e)}/>
             <br/>
 
-            <label style={{color:'#11153e', fontWeight: 'bold'}}>Timeslot: </label>
-            <input type="text" name="timeslot" value={this.state.timeslot || ''} placeholder={task.timeslot} onChange={(e) => this.handleChange(e)}/>
+            <label style={{color:'#11153e', fontWeight: 'bold'}}>Priority: </label>
+            <input type="text" name="priority" value={this.state.priority || ''} placeholder={task.priority} onChange={(e) => this.handleChange(e)}/>
             <br/>
 
             <select onChange={(e) => this.handleSelectChange(e)}>
