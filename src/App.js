@@ -6,6 +6,7 @@ import { Switch, Route } from "react-router-dom";
 import {
   HomePageContainer,
   EmployeeContainer,
+  EditEmployeeContainer,
   TaskContainer,
   AllEmployeesContainer,
   AllTasksContainer,
@@ -26,6 +27,7 @@ const App = () => {
         <Route exact path="/employees" component={AllEmployeesContainer} />
         <Route exact path="/newemployee" component={NewEmployeeContainer} />
         <Route exact path="/employee/:id" component={EmployeeContainer} />
+        <Route exact path="/editemployee/:id" component={EditEmployeeContainer} />
         <Route exact path="/tasks" component={AllTasksContainer} />
         <Route exact path="/newtask" component={NewTaskContainer} />
         <Route exact path="/task/:id" component={TaskContainer} />
