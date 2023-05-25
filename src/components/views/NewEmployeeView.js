@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 
 
 const NewEmployeeView = (props) => {
@@ -6,6 +6,7 @@ const NewEmployeeView = (props) => {
 
   return (
     <div className="root">
+      <Link to={`/employees`} className="backBtn">Back to All Employees</Link>
       <div className="formContainer">
         <div className="formTitle">
           <h2 style={{fontWeight: 'bold', fontFamily: 'Courier, sans-serif', fontSize: '20px', color: '#11153e'}}>

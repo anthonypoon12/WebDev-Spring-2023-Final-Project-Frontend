@@ -9,6 +9,8 @@ const EmployeeView = (props) => {
   return (
     <div>      
       <h1>{employee.firstname} {employee.lastname}</h1>
+      <Link to={`/employees`} className="backBtn">Back to All Employees</Link>
+      <h1>{employee.firstname}</h1>
       <h3>{employee.department}</h3>
       <Link to={`/editemployee/${employee.id}`}>Edit employee information</Link>
       <div style={{display: "flex", flexDirection: "row", justifyContent: "space-evenly"}}>
