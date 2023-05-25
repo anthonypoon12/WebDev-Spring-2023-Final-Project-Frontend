@@ -16,7 +16,6 @@ class AllEmployeesContainer extends Component {
     render(){
         return(
             <div>
-              <h1>All Employees</h1>
                 <AllEmployeesView 
                   allEmployees={this.props.allEmployees}
                   deleteEmployee={this.props.deleteEmployee}   
