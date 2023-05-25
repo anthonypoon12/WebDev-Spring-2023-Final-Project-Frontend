@@ -3,11 +3,17 @@ import { Link } from "react-router-dom";
 
 const AllEmployeesView = (props) => {
   if (!props.allEmployees.length) {
-    return <div>There are no employees.</div>;
+    return (
+      <div>
+        <Link to={`/`} className="backBtn">Back to Home Page</Link>
+        <h1>All Employees</h1>
+        There are no employees.
+      </div>);
   }
 
   return (
     <div>
+      <Link to={`/`} className="backBtn">Back to Home Page</Link>
       {props.allEmployees.map((employee) => {
         let name = employee.firstname + " " + employee.lastname;
         return (
