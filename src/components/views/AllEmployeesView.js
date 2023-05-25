@@ -5,7 +5,9 @@ const AllEmployeesView = (props) => {
   if (!props.allEmployees.length) {
     return (
       <div>
-        <div>There are no employees.</div>
+        <Link to={`/`} className="backBtn">Back to Home Page</Link>
+        <h1>All Employees</h1>
+        There are no employees.
         <Link to={`/newemployee`}>
           <button>Add New Employee</button>
         </Link>
@@ -15,6 +17,7 @@ const AllEmployeesView = (props) => {
 
   return (
     <div>
+      <Link to={`/`} className="backBtn">Back to Home Page</Link>
       {props.allEmployees.map((employee) => {
         let name = employee.firstname + " " + employee.lastname;
         return (

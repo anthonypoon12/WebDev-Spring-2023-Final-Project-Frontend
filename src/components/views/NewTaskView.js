@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom";
 
 
 const NewTaskView = (props) => {
@@ -6,6 +7,7 @@ const NewTaskView = (props) => {
 
   return (
     <div className="root">
+      <Link to={`/tasks`} className="backBtn">Back to All Tasks</Link>
       <div className="formContainer">
         <div className="formTitle">
           <h2 style={{fontWeight: 'bold', fontFamily: 'Courier, sans-serif', fontSize: '20px', color: '#11153e'}}>
