@@ -44,6 +44,7 @@ class EditTaskContainer extends Component {
         this.state = {
           description: "", 
           priority: "",
+          isComplete: "",
           employeeId: null, 
           redirect: false, 
           redirectId: null,
@@ -58,6 +59,7 @@ class EditTaskContainer extends Component {
         this.setState({
             description: this.props.task.description, 
             priority: this.props.task.priority,
+            isComplete: this.props.task.isComplete,
             employeeId: this.props.task.employeeId, 
         });
       }
@@ -94,6 +96,7 @@ class EditTaskContainer extends Component {
             id: this.props.task.id,
             description: this.state.description,
             priority: this.state.priority,
+            isComplete: this.state.isComplete,
             employeeId: this.state.employeeId
         };
         
@@ -134,6 +137,10 @@ class EditTaskContainer extends Component {
 
             <label style={{color:'#11153e', fontWeight: 'bold'}}>Priority: </label>
             <input type="text" name="priority" value={this.state.priority || ''} placeholder={task.priority} onChange={(e) => this.handleChange(e)}/>
+            <br/>
+
+            <label style={{color:'#11153e', fontWeight: 'bold'}}>Completed: </label>
+            <input type="text" name="isComplete" value={this.state.isComplete || ''} placeholder={String(task.isComplete)} onChange={(e) => this.handleChange(e)}/>
             <br/>
 
             <select onChange={(e) => this.handleSelectChange(e)}>
