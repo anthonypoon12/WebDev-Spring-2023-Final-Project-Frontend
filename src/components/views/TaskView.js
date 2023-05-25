@@ -9,6 +9,12 @@ const TaskView = (props) => {
       {task.employee ? <Link to={`/employee/${task.employeeId}`} style={{border: "0"}}>Employee: {task.employee.firstname + " " + task.employee.lastname}</Link> : "Employee: N/A"}
       <br/>
       <br/>
+      Priority: {task.priority}
+      <br/>
+      <br/>
+      Completed: {task.isComplete ? "Yes" : "No"}
+      <br/>
+      <br/>
       <Link to={`/edittask/${task.id}`}>Edit task information</Link>
       <br/>
       <br/>
