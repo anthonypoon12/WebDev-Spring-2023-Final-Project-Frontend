@@ -124,6 +124,8 @@ class EditTaskContainer extends Component {
 
         return (
         <div>
+          <h1>Editing Task:</h1>
+          <h5>Change fields to edit directly:</h5>
         <form style={{textAlign: 'center'}} onSubmit={(e) => this.handleSubmit(e)}>
             <label style= {{color:'#11153e', fontWeight: 'bold'}}>Title: </label>
             <input type="text" name="title" value={this.state.title || ''} placeholder={task.title} onChange ={(e) => this.handleChange(e)}/>
@@ -155,18 +157,20 @@ class EditTaskContainer extends Component {
 
           {task.employeeId !== null ?
             <div> Current employee:  
-            <Link to={`/employee/${task.employeeId}`}>{task.employee.firstname}</Link>
+            <Link style={{border: "0"}} to={`/employee/${task.employeeId}`}>{task.employee.firstname}</Link>
             <button onClick={async () => {await editTask({id:task.id, employeeId: null});  fetchTask(task.id)}}>Unassign</button>
             </div>
             : <div> No employee currently assigned </div>
           }
 
-          <div> Other employees
+          <div style={{backgroundColor: "lightyellow", padding: "15px", margin: "20px"}}> 
+            <h3 style={{margin: "0"}}>Other employees</h3>
           {otherEmployees.map(employee => {
             return (
             <div key={employee.id}>
+              <br />
                 <Link to={`/employee/${employee.id}`}>
-                  <h4>{employee.firstname}</h4>
+                  {employee.firstname}
                 </Link>
                 <button onClick={async() => {await editTask({id:task.id, employeeId: employee.id}); fetchTask(task.id)}}>Assign this employee</button>
             </div>
