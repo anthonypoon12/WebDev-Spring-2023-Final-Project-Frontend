@@ -5,7 +5,7 @@ const TaskView = (props) => {
   return (
     <div>
       <Link to={`/tasks`} className="backBtn">Back to All Tasks</Link>
-      <h1>{"Task: " + task.title}</h1>
+      <h1>{"Task: " + task.description}</h1>
       {task.employee ? <Link to={`/employee/${task.employeeId}`} style={{border: "0"}}>Employee: {task.employee.firstname + " " + task.employee.lastname}</Link> : "Employee: N/A"}
       <br/>
       <br/>
