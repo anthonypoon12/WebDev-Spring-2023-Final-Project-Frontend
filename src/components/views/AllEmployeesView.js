@@ -8,7 +8,11 @@ const AllEmployeesView = (props) => {
         <Link to={`/`} className="backBtn">Back to Home Page</Link>
         <h1>All Employees</h1>
         There are no employees.
-      </div>);
+        <Link to={`/newemployee`}>
+          <button>Add New Employee</button>
+        </Link>
+      </div>
+    );
   }
 
   return (
