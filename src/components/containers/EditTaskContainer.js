@@ -124,9 +124,9 @@ class EditTaskContainer extends Component {
 
         return (
         <div>
+        <Link to={`/task/${this.props.task.id}`} className="backBtn">Back to Task Page</Link>
           <h1>Editing Task:</h1>
           <h5>Change fields to edit directly:</h5>
-        <Link to={`/task/${this.props.task.id}`} className="backBtn">Back to Task Page</Link>
         <form style={{textAlign: 'center'}} onSubmit={(e) => this.handleSubmit(e)}>
             <label style= {{color:'#11153e', fontWeight: 'bold'}}>Title: </label>
             <input type="text" name="title" value={this.state.title || ''} placeholder={task.title} onChange ={(e) => this.handleChange(e)}/>

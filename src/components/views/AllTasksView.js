@@ -7,6 +7,7 @@ const AllTasksView = (props) => {
     return (
     <div>
       <Link to={`/`} className="backBtn">Back to Home Page</Link>
+      <h1>All Tasks</h1>
       <p>There are no tasks.</p>
       <Link to={`/newtask`}>
         <button>Add New Task</button>
@@ -17,8 +18,8 @@ const AllTasksView = (props) => {
   
   return (
     <div>
-      <h1>All Tasks</h1>
       <Link to={`/`} className="backBtn">Back to Home Page</Link>
+      <h1>All Tasks</h1>
       {tasks.map((task) => {
         let title = task.title;
         return (

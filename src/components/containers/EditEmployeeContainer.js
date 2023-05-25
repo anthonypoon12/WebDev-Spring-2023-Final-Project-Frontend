@@ -124,6 +124,7 @@ class EditEmployeeContainer extends Component {
         return (
         <div>
         <Link to={`/employee/${this.state.employeeId}`} className="backBtn">Back to Employee Page</Link>
+        <h1>Edit {employee.firstname} {employee.lastname}</h1>
         <form style={{textAlign: 'center'}} onSubmit={(e) => this.handleSubmit(e)}>
             <label style= {{color:'#11153e', fontWeight: 'bold'}}>First Name: </label>
             <input type="text" name="firstname" value={this.state.firstname || ''} placeholder={employee.firstname} onChange ={(e) => this.handleChange(e)}/>

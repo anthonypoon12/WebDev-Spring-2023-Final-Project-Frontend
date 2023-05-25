@@ -18,6 +18,7 @@ const AllEmployeesView = (props) => {
   return (
     <div>
       <Link to={`/`} className="backBtn">Back to Home Page</Link>
+      <h1>All Employees</h1>
       {props.allEmployees.map((employee) => {
         let name = employee.firstname + " " + employee.lastname;
         return (
