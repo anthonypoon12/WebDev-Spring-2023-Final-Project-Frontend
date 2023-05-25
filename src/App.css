@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: center; 
 }
 
 .App-logo {
@@ -35,6 +35,22 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+:root{
+  background-color: bisque;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: Helvetica, Arial, sans-serif;
+  color: navy;
+}
+
+a {
+  border: 2px solid gray;
+  border-radius: 30px;
+  padding: 8px;
+  margin: 5px;
 }
 
 .backBtn{

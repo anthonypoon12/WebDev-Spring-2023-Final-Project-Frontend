@@ -8,6 +8,7 @@ const EmployeeView = (props) => {
   
   return (
     <div>      
+      <h1>{employee.firstname} {employee.lastname}</h1>
       <Link to={`/employees`} className="backBtn">Back to All Employees</Link>
       <h1>{employee.firstname}</h1>
       <h3>{employee.department}</h3>
@@ -17,19 +18,22 @@ const EmployeeView = (props) => {
         {assignedTasks.map( task => {
           return (
             <div key={task.id}>
+              <br />
             <Link to={`/task/${task.id}`}>
-              <h4>{task.title}</h4>
+              {task.title}
             </Link>
             <button onClick={() => editTask({id:task.id, employeeId: null})}>x</button>
             </div>
           );
         })}</div>
+        <br />
         <div>Available tasks:
         {availableTasks.map( task => {
           return (
             <div key={task.id}>
+              <br />
             <Link to={`/task/${task.id}`}>
-              <h4>{task.title}</h4>
+              {task.title}  
             </Link>
             <button onClick={() => editTask({id:task.id, employeeId: employee.id})}>+</button>
             </div>

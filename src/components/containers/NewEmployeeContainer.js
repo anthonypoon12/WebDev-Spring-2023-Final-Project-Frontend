@@ -29,7 +29,7 @@ class NewEmployeeContainer extends Component {
         event.preventDefault();
         //dont need ID because the task has not been created yet
         if(this.state.firstname==="" || this.state.lastname === ""){
-          this.setState({error:"First name, last name, and department fields is required"});
+          this.setState({error:"First name, last name, and department fields are required"});
           return;
         }
         let employee = {

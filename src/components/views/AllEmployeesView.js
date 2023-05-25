@@ -22,16 +22,20 @@ const AllEmployeesView = (props) => {
         let name = employee.firstname + " " + employee.lastname;
         return (
           <div key={employee.id}>
-          <Link to={`/employee/${employee.id}`}>
-            <h1>{name}</h1>
+            <br />
+          <Link to={`/employee/${employee.id}`} style={{border: "0", backgroundColor: "beige"}}>
+            {name}
           </Link>
-          <p>{employee.department}</p>
           <button onClick={() => props.deleteEmployee(employee.id)}>Delete</button>
+          <div style={{margin: "2px", fontSize: "75%"}}>Department: {employee.department ? employee.department : "None"}</div>
           {/* <button onClick={() => console.log(props)}>Delete</button> */}
         </div>
         );
 
       })}
+
+      <br />
+      <br />
       <Link to={`/newemployee`}>
         <button>Add New Employee</button>
       </Link>
